@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+
+	<bean name="loginuserService" class="com.service.LoginuserServiceImpl">
+		<property name="loginuserDAO">
+			<ref bean="loginuserDAO" />
+		</property>
+	</bean>
+	
+
+	
+	<bean name="gangweiService" class="com.service.GangweiServiceImpl">
+		<property name="gangweiDAO">
+			<ref bean="gangweiDAO" />
+		</property>
+	</bean>
+	
+	
+	<bean name="shenqService" class="com.service.ShenqServiceImpl">
+		<property name="shenqDAO">
+			<ref bean="shenqDAO" />
+		</property>
+	</bean>
+	
+	<bean name="gongziService" class="com.service.GongziServiceImpl">
+		<property name="gongziDAO">
+			<ref bean="gongziDAO" />
+		</property>
+	</bean>
+	
+	<bean name="guanbiService" class="com.service.GuanbiServiceImpl">
+	<property name="guanbiDAO">
+		<ref bean="guanbiDAO" />
+	</property>
+</bean>
+
+</beans>

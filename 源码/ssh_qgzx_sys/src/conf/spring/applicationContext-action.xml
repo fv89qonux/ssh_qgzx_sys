@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+
+
+
+	<bean id="loginuserWebAction" class="com.action.LoginuserWebAction"
+		scope="prototype">
+		<property name="loginuserService">
+			<ref bean="loginuserService" />
+		</property>
+		<property name="guanbiService">
+		<ref bean="guanbiService" />
+	</property>
+	</bean>
+	
+
+	
+	<bean id="gangweiWebAction" class="com.action.GangweiWebAction"
+		scope="prototype">
+		<property name="gangweiService">
+			<ref bean="gangweiService" />
+		</property>
+	</bean>
+	
+	<bean id="shenqWebAction" class="com.action.ShenqWebAction"
+		scope="prototype">
+		<property name="shenqService">
+			<ref bean="shenqService" />
+		</property>
+		<property name="gangweiService">
+			<ref bean="gangweiService" />
+		</property>
+	</bean>
+	
+	
+	<bean id="gongziWebAction" class="com.action.GongziWebAction"
+		scope="prototype">
+		<property name="gongziService">
+			<ref bean="gongziService" />
+		</property>
+	</bean>
+	
+	<bean id="guanbiWebAction" class="com.action.GuanbiWebAction" scope="prototype">
+	<property name="guanbiService">
+		<ref bean="guanbiService" />
+	</property>
+</bean>
+	
+
+
+
+</beans>
